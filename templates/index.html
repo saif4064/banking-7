@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		 <title>Banking subscription Analysis Model</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+        </head>
+    <body>
+        <h1 class="paj">Banking subscription Analysis</h1>
+        <form action="{{url_for('predict')}}"method="post">
+            <input class="nav"type="text" name="Age" placeholder="Age" required="required">
+			
+			
+			
+			<select class="suhel"name="Select job"  required>
+			
+           
+			<option class="sania" selected hidden>Select job</option>
+			
+                <option value="Admin">Admin</option>
+                <option value="Blue collar">Blue collar</option>
+                 <option value="Entrepreneur">Entrepreneur</option>
+                  <option value="Housemaid">Housemaid</option>
+				  <option value="Management">Management</option>
+                  <option value="Retired">Retired</option>
+                  <option value="services">services</option>
+				  <option value="Student">Student</option>
+                  <option value="Technican">Technican</option>
+				  <option value="Unemployed">Unemployed</option>
+				  <option value="Unemployed">Self employement</option>
+                  <option value="None">None</option>
+				   </select>
+                 
+				 
+				
+				 <select class="suhel"name="Select1 job" required >
+				 <option Selected hidden>Marital</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Married">Married</option>
+                 <option value="Single">Single</option>
+				 <option value="None">None</option>
+				  </select>
+				  
+				  
+				  
+				 <select class="suhel" name="Select2 job" required>
+				 <option Selected hidden>Education</option>
+                <option value="Basic">Basic</option>
+                <option value="High school">High school</option>
+                 <option value="illiterate">illiterate</option>
+				  <option value="Professional course">Professional course</option>
+                 <option value="university degree">university degree</option>
+				 <option value="None">None</option>
+				  </select>
+				  
+				  
+				 <select class="suhel id="cars" name="Select3 job" required>
+				  <option class="suhel" Selected hidden>Default</option>
+                <option value="yes">Yes</option>
+                <option value="No">No</option>
+				 <option value="None">None</option>
+				  </select>
+				  
+				
+				 <select class="suhel" id="cars" name="Select4 job" required>
+				 
+				 <option value="yes" Selected hidden>House loan</option>
+                <option value="yes">Yes</option>
+                <option value="No">No</option>
+				 <option value="None">None</option>
+				  </select>
+				  
+				 
+				 <select class="suhel" id="cars" name="Select5 job" required>
+				 <option value="yes" Selected hidden>loan</option>
+                <option value="yes">Yes</option>
+                <option value="No">No</option>
+				 <option value="None">None</option>
+				  </select>
+				  
+				   
+				 <select class="suhel" id="cars"name="Select6 job" required>
+				 <option value="Telephone" Selected hidden>Contact</option>
+                <option value="Telephone">Telephone</option>
+                <option value="Cellular">Cellular</option>
+				  </select>
+				  
+				 
+				 <select  class="suhel" id="cars"name="Select7 job" required>
+				 <option value="jan" Selected hidden>Month</option>
+				  
+                <option value="jan">Jan</option>
+                <option value="Feb">Feb</option>
+				<option value="mar">Mar</option>
+				<option value="Apr">Apr</option>
+                <option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+				<option value="oct">Oct</option>
+				<option value="Nov">Nov</option>
+				<option value="Dec">Dec</option>
+				 </select>
+				 
+				
+				 <select class="suhel" id="cars"name="Select8 job" required>
+				 <option value="Mon"Selected hidden>Day of week</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+				<option value="Wed">Wed</option>
+				<option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+				 </select>
+				 <input  class="nav"type="text" name="Duration" placeholder="Duration" required="required">
+				 <input class="nav" type="text" name="Campaign" placeholder="Campaign" required="required">
+				 <input class="nav"type="text" name="pdays" placeholder="pdays" required="required">
+				 <input class="nav" type="text" name="Previous" placeholder="Previous" required="required">
+				 
+				 
+			
+				 <select class="suhel" id="cars"name="Select9 job" required>
+				 
+				 <option value="Failure" Selected hidden>Poutcome</option>
+                <option value="Failure">Failure</option>
+                <option value="success">success</option>
+				<option value="Nonexistent">Nonexistent</option>
+				
+				  </select>
+				  <input class="nav" type="text" name="Emp.var.rate" placeholder="Emp.var.rate" required="required">
+				  <input class="nav" type="text" name="cons.price.idx" placeholder="cons.price.idx" required="required">
+				  <input class="nav" type="text" name="Cons.conf.idx" placeholder="Cons.conf.idx" required="required">
+				  <input class="nav" type="text" name="euribor3m" placeholder="Euribor3m" required="required">
+				  <input class="nav" type="text" name="Nr.employed" placeholder="Nr.employed" required="required">
+				
+            
+		   <button class="nav3" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		   
+			<h1 class="jack1">{{prediction_text}}</h1>
+		     
+        </form>
+		<h1 class="jack16">Developed by:</h1>
+		<h1 class="jack12">Mohammad saif</h1>
+		
+		<h1 class="jack1">Note</h1>
+		<h1 class="jack">*Refrences for column</h1>
+		<h1 class="jack">*Age:Type the age of a person</h1>
+		<h1 class="jack">*job:Select the job of a person</h1>
+		<h1 class="jack">*Marital:Marital Status</h1>
+		<h1 class="jack">*Education:Select the education</h1>
+		<h1 class="jack">*Default:Has credit in default</h1>
+		<h1 class="jack">*Housing:Has housing loan? </h1>
+		<h1 class="jack">*loan:Has personal loan?  </h1>
+		<h1 class="jack">*contact:contact communication type </h1>
+		<h1 class="jack">*month: last contact month of year</h1>
+		<h1 class="jack">*day_of_week: last contact day of the week </h1>
+		<h1 class="jack">*Duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. </h1>
+		<h1 class="jack">*campaign: number of contacts performed during this campaign and for this client</h1>
+		<h1 class="jack">*- pdays: number of days that passed by after the client was last contacted from a previous campaign (Type 999 if client was not previously contacted) </h1>
+		<h1 class="jack">*previous: number of contacts performed before this campaign and for this client  </h1>
+		<h1 class="jack">*poutcome: select outcome of the previous marketing campaign  </h1>
+		<h1 class="jack">*emp.var.rate: employment variation rate   </h1>
+		<h1 class="jack">*cons.price.idx: consumer price index - monthly indicator   </h1>
+		<h1 class="jack">*cons.conf.idx: consumer confidence index   </h1>
+		<h1 class="jack">*euribor3m: euribor 3 month rate</h1>
+		<h1 class="jack">*nr.employed: number of employees</h1>
+		
+		
+		
+		
+		
+		
+		
+        
+    </body>
+</html>
+
+
+
